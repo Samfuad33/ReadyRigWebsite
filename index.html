@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Precision Parts</title>
+    <style>
+        /* Basic Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            color: #333;
+            background-color: #f5f5f5;
+            overflow-x: hidden;
+        }
+
+        /* Animation Keyframes */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        @keyframes pulse {
+            0%, 100% { background-color: #0073e6; }
+            50% { background-color: #1e90ff; }
+        }
+        @keyframes slideIn {
+            from { opacity: 0; transform: translateX(-20px); }
+            to { opacity: 1; transform: translateX(0); }
+        }
+
+        /* Header with Pulse Animation */
+        header {
+            background: linear-gradient(135deg, #0073e6, #1e90ff);
+            color: #fff;
+            padding: 2em 1em;
+            text-align: center;
+            animation: pulse 4s infinite;
+        }
+        header h1 {
+            font-size: 2.5em;
+            margin-bottom: 0.3em;
+        }
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 1em;
+            font-size: 1.1em;
+            transition: color 0.3s;
+        }
+        nav a:hover {
+            color: #ddd;
+        }
+
+        /* Section Fade-in Animation */
+        .section {
+            padding: 2em;
+            text-align: center;
+            animation: fadeIn 1.5s ease-out;
+        }
+
+        h2 {
+            color: #1e90ff;
+            margin-bottom: 0.5em;
+            animation: slideIn 1.5s ease-out;
+        }
+
+        /* Product and Prebuilt Cards */
+        .products, .prebuilt {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+        }
+        .product, .prebuilt-item {
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+            padding: 1.5em;
+            width: 250px;
+            transition: transform 0.3s, box-shadow 0.3s;
+            animation: fadeIn 1.5s ease-out;
+        }
+        .product:hover, .prebuilt-item:hover {
+            transform: scale(1.05);
+            box-shadow: 0 6px 12px rgba(0,0,0,0.3);
+        }
+        .product img, .prebuilt-item img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            margin-bottom: 1em;
+            animation: fadeIn 2s ease-out;
+        }
+
+        /* Button Hover Effect */
+        button {
+            background: #1e90ff;
+            color: #fff;
+            padding: 0.5em 1em;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background 0.3s, transform 0.2s;
+        }
+        button:hover {
+            background: #0073e6;
+            transform: scale(1.1);
+        }
+
+        /* Contact Form */
+        form input, form textarea {
+            width: 100%;
+            padding: 0.8em;
+            margin-top: 0.5em;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            animation: slideIn 1s ease-out;
+        }
+        form input[type="submit"] {
+            background: #1e90ff;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+            padding: 0.8em 1em;
+            margin-top: 1em;
+            transition: background 0.3s, transform 0.2s;
+            animation: fadeIn 1.5s ease-out;
+        }
+        form input[type="submit"]:hover {
+            background: #0073e6;
+            transform: scale(1.05);
+        }
+
+        /* Footer */
+        footer {
+            background-color: #333;
+            color: #fff;
+            padding: 1em;
+            text-align: center;
+            margin-top: 2em;
+            animation: fadeIn 2s ease-out;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Precision Parts</h1>
+    <nav>
+        <a href="#parts">Computer Parts</a>
+        <a href="#prebuilt">Prebuilt PCs</a>
+        <a href="#contact">Contact</a>
+    </nav>
+</header>
+
+<section id="parts" class="section">
+    <h2>Computer Parts</h2>
+    <div class="products">
+        <div class="product">
+            <img src="https://via.placeholder.com/200" alt="Graphics Card">
+            <h3>Graphics Card</h3>
+            <p>High-performance GPU for gaming and design.</p>
+            <p>Price: $299</p>
+            <button>Buy Now</button>
+        </div>
+        <div class="product">
+            <img src="https://via.placeholder.com/200" alt="Processor">
+            <h3>Processor</h3>
+            <p>Powerful CPU for multitasking and speed.</p>
+            <p>Price: $199</p>
+            <button>Buy Now</button>
+        </div>
+        <!-- Add more parts as needed -->
+    </div>
+</section>
+
+<section id="prebuilt" class="section">
+    <h2>Prebuilt Computers</h2>
+    <div class="prebuilt">
+        <div class="prebuilt-item">
+            <img src="https://via.placeholder.com/200" alt="Gaming Rig">
+            <h3>Gaming Rig</h3>
+            <p>Optimized for gaming with powerful GPU and CPU.</p>
+            <p>Price: $1200</p>
+            <button>Buy Now</button>
+        </div>
+        <div class="prebuilt-item">
+            <img src="https://via.placeholder.com/200" alt="Workstation">
+            <h3>Workstation</h3>
+            <p>
