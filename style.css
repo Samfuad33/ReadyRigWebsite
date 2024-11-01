@@ -92,3 +92,102 @@ body {
     font-size: 0.9em;
     color: #666;
 }
+
+form {
+    max-width: 500px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+form label {
+    font-weight: bold;
+}
+
+form input, form textarea {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 100%; /* Make input fields full width */
+    box-sizing: border-box;
+}
+
+form textarea {
+    resize: vertical;
+}
+
+form button {
+    background-color: #00c21a;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100px;
+    align-self: flex-start;
+}
+
+/* Compact Support Section Styling with Reduced Height */
+.support-section {
+    background-color: #ffffff;
+    color: #333;
+    padding: 15px 10px; /* Reduced padding for less height */
+    text-align: center;
+    max-width: 500px;
+    margin: 20px auto;
+    border-radius: 8px;
+    border: 2px solid #ddd;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.support-section h2 {
+    font-size: 1.6em;
+    color: #333;
+    margin-bottom: 5px; /* Reduced margin */
+}
+
+.support-section p {
+    font-size: 0.9em; /* Slightly smaller font for tighter look */
+    color: #555;
+    line-height: 1.4; /* Tighter line height */
+    margin: 5px 0; /* Reduced margin between lines */
+}
+
+.support-link {
+    color: #007acc;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.support-link:hover {
+    text-decoration: underline;
+    color: #005f99;
+}
+
+
+
+/* About Section Styling with Border and Background */
+.about-section {
+    background-color: #ffffff;
+    color: #333;
+    padding: 25px;
+    text-align: center;
+    max-width: 800px;
+    margin: 30px auto;
+    border-radius: 8px;
+    border: 2px solid #ddd; /* Light border */
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+}
+
+.about-section h2 {
+    font-size: 1.8em;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.about-section p {
+    font-size: 1em;
+    color: #555;
+    line-height: 1.6;
+}
