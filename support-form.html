@@ -3,26 +3,58 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Support</title>
     <link rel="stylesheet" href="style.css">
+    <title>Contact Us - Precision Parts</title>
 </head>
 <body>
 
-    <section class="products-section">
-        <h2>Contact Support</h2>
-        <form action="/submit-support" method="post">
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" required>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="container">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="index.html#gaming-pcs">Gaming PCs</a></li>
+                <li><a href="index.html#prebuilt-pcs">Prebuilt PCs</a></li>
+                <li><a href="index.html#pc-parts">PC Parts</a></li>
+                <li><a href="community.html">Community</a></li>
+                <li><a href="support.html">Support</a></li>
+            </ul>
+        </div>
+    </nav>
 
-            <label for="subject">Subject:</label>
-            <input type="text" id="subject" name="subject" required>
+    <!-- Support Form Section -->
+    <section class="contact-page">
+        <div class="contact-form-container">
+            <h2>Contact Us</h2>
+            <!-- Use onsubmit to prevent the form from submitting and call the displayMessage function instead -->
+            <form onsubmit="event.preventDefault(); displayMessage();" method="post">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
 
-            <label for="message">Message:</label>
-            <textarea id="message" name="message" rows="4" required></textarea>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
 
-            <button type="submit" class="button">Submit</button>
-        </form>
+                <p>What is your reason for contacting us?</p>
+                <div class="radio-group">
+                    <label><input type="radio" name="reason" value="hardware"> Hardware Issue</label>
+                    <label><input type="radio" name="reason" value="software"> Software Issue</label>
+                    <label><input type="radio" name="reason" value="business"> Business Inquiry</label>
+                    <label><input type="radio" name="reason" value="other"> Other</label>
+                </div>
+
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" rows="4" required></textarea>
+
+                <button type="submit" class="submit-button">Send</button>
+            </form>
+        </div>
     </section>
 
+    <!-- JavaScript to display confirmation message -->
+    <script>
+        function displayMessage() {
+            alert("Your message has been sent!");
+        }
+    </script>
 </body>
 </html>
