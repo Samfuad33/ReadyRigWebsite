@@ -7,21 +7,21 @@ const role = document.querySelector('.role');
 const testimonials = [
     {
         name: 'Miyah Myles',
-        position: 'Marketing',
+        position: 'IT Specialist',
         photo: 'https://randomuser.me/api/portraits/women/46.jpg',
-        text: "I've worked with literally hundreds of HTML/CSS developers, and I have to say the top spot goes to this guy. This guy is an amazing developer. He stresses clean, detailed code and respects the design. He goes above and beyond and transforms ART into PIXELS without a glitch, every time."
+        text: "I've worked with literally hundreds of computer producers, and I have to say the top spot goes to these guys. Our computers were made and shipped within a week! Would greatly reccomend!"
     },
     {
         name: 'June Cha',
         position: 'Software Engineer',
         photo: 'https://randomuser.me/api/portraits/women/44.jpg',
-        text: 'This guy is an amazing frontend developer that delivered the task exactly how we needed it. He goes the extra mile to make sure you are happy with your project. I will surely work again with him!'
+        text: 'This company is amazing! They delivered the task exactly how we needed it. They go the extra mile to make sure you are happy with your project. I will surely work again with this company!.'
     },
     {
         name: 'Iida Niskanen',
         position: 'Data Entry',
         photo: 'https://randomuser.me/api/portraits/women/68.jpg',
-        text: "He's a hard worker and communicates very well. He was responsive and delivered fantastic work. We'll definitely work with him again!"
+        text: "This compnay has so many hard workers and helpful community very well. Nayem was responsive and delivered fantastic work. We'll definitely work with him again!"
     }
 ];
 
