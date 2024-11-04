@@ -3,58 +3,83 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Submit a request</title>
+    <link rel="stylesheet" href="support-style.css">
     <link rel="stylesheet" href="style.css">
-    <title>Contact Us - Precision Parts</title>
+    <script src = "support-form-script.js" defer></script>
 </head>
 <body>
-
     <!-- Navigation Bar -->
-    <nav class="navbar">
-        <div class="container">
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="index.html#gaming-pcs">Gaming PCs</a></li>
-                <li><a href="index.html#prebuilt-pcs">Prebuilt PCs</a></li>
-                <li><a href="index.html#pc-parts">PC Parts</a></li>
-                <li><a href="community.html">Community</a></li>
-                <li><a href="support.html">Support</a></li>
-            </ul>
+    <div class="navbar">
+        <a href="#gaming-pcs">Gaming PCs</a>
+        <a href="#prebuilt-pcs">Prebuilt PCs</a>
+        <a href="#pc-parts">PC Parts</a>
+        <a href="#support">Support</a>
+    </div>
+
+    <div class="request">
+        <h1>Submit a request</h1>
+    </div>
+
+    <form>
+        <!--Different types of customer problems-->
+        <div class = problem-section>
+            <h3>Please choose your problem below</h3>
+            <select name="problem" id="problem-selection">
+                <option value ="nothing" id = "nothing">-</option>
+                <option value ="status" id = "status">Check order status</option>
+                <option value ="refund" id = "refund">Check refund status</option>
+                <option value ="contact" id = "contact">Contact support</option>
+                <option value ="track" id = "track">Track your package</option>
+            </select>
         </div>
-    </nav>
 
-    <!-- Support Form Section -->
-    <section class="contact-page">
-        <div class="contact-form-container">
-            <h2>Contact Us</h2>
-            <!-- Use onsubmit to prevent the form from submitting and call the displayMessage function instead -->
-            <form onsubmit="event.preventDefault(); displayMessage();" method="post">
-                <label for="name">Name:</label>
-                <input type="text" id="name" name="name" required>
+        <div class = problem-info>
+            <div class ="input-group" div id ="order-status">
+                <label for="status">Order ID:</label>
+                <input type="text" name="status" placeholder="Enter your order ID" pattern="[A-Za-z0-9]+" required>
+            </div>
 
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" required>
+            <div class ="input-group" div id ="refund-status">
+                <label for="status">Refund ID:</label>
+                <input type="text" name="status" placeholder="Enter your order ID" pattern="[A-Za-z0-9]+" required>
+            </div>
 
-                <p>What is your reason for contacting us?</p>
-                <div class="radio-group">
-                    <label><input type="radio" name="reason" value="hardware"> Hardware Issue</label>
-                    <label><input type="radio" name="reason" value="software"> Software Issue</label>
-                    <label><input type="radio" name="reason" value="business"> Business Inquiry</label>
-                    <label><input type="radio" name="reason" value="other"> Other</label>
-                </div>
+            <div class ="input-group" div id ="track-status">
+                <label for="refund">Tracking ID:</label>
+                <input type="text" name="refund" placeholder="Enter your tracking ID" pattern="[A-Za-z0-9]+" required>
+            </div>
 
-                <label for="message">Message:</label>
-                <textarea id="message" name="message" rows="4" required></textarea>
+            <div class ="input-group" div id ="contact-support">
+                <label for="contact">Email Address:</label>
+                <input type="email" name="contact" placeholder="johndoe@email.com" pattern="[A-Za-z0-9]+" required>
+            </div>
 
-                <button type="submit" class="submit-button">Send</button>
-            </form>
+            <div class ="input-group" div id ="subject-box">
+                <label for="subject">Subject:</label>
+                <input type="text" name="subject" placeholder="Optional">
+            </div>
+
+            <div class ="input-group" div id ="description-box">
+                <label for="description">Description:</label>
+                <textarea name="description"></textarea>
+                <h4>Please enter the details of your request.</h4>
+            </div>
+
+            <div class ="input-group" div id ="attachment-box">
+                <button type="button"> 
+                    <label for="image" id="file-label">Attachments (add files here)</label>
+                    <input type="file" name="image" id="image">
+                </button>
+            </div>
+
+            <div id = "submit-box">
+                <button>
+                    <input type ="submit" value="Submit">
+                </button>
+            </div>
         </div>
-    </section>
 
-    <!-- JavaScript to display confirmation message -->
-    <script>
-        function displayMessage() {
-            alert("Your message has been sent!");
-        }
-    </script>
+    </form>
 </body>
 </html>
