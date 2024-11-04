@@ -1,4 +1,5 @@
 document.getElementById('problem-selection').addEventListener('change', function() {
+    // Event listener to see what user changes in the select menu form
 
     // These values are ids given based on user selection on the form box
     const selectedValue = this.value; // Value will be the id we get from above
